@@ -42,17 +42,23 @@ namespace TakeMeGameWinFormsAppHard
             x += vx;
             y += vy;
         }
-        private void Clear()
+        public void Clear()
         {
             var graphics = form.CreateGraphics();
-            var brush = Brushes.White; // сравнять цвет с цветом формы
+            var brush = Brushes.LightGray; // сравнять цвет с цветом формы
             var rectangle = new Rectangle(x, y, size, size);
             graphics.FillEllipse(brush, rectangle);
         }
 
+
         public bool IsCaught()
         {
             return x >= 0 && y >= 0 && (x + size) <= form.ClientSize.Width && (y + size) <= form.ClientSize.Height;
+        }
+
+        public bool ContainsPoint(int x, int y)
+        {
+            return x >= this.x && x <= this.x + this.size && y >= this.y && y <= this.y + this.size;
         }
     }
 }

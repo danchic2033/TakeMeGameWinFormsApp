@@ -42,7 +42,7 @@ namespace TakeMeGameWinFormsAppHard
             createBallsButton.TabIndex = 0;
             createBallsButton.Text = "создать";
             createBallsButton.UseVisualStyleBackColor = true;
-            createBallsButton.Click += this.createBallsButton_Click;
+            createBallsButton.Click += createBallsButton_Click;
             // 
             // getBallsLabel
             // 
@@ -73,6 +73,8 @@ namespace TakeMeGameWinFormsAppHard
             Controls.Add(createBallsButton);
             Name = "MainForm";
             Text = "Form1";
+            Load += MainForm_Load;
+            MouseDown += MainForm_MouseDown;
             ResumeLayout(false);
             PerformLayout();
         }

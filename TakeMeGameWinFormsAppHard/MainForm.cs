@@ -21,6 +21,23 @@ namespace TakeMeGameWinFormsAppHard
             }
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void MainForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            for (int i = 0; i < moveBalls.Count; i++)
+            {
+                if (moveBalls[i].ContainsPoint(e.X, e.Y))
+                {
+                    moveBalls[i].Stop();
+                    count++;
+                    break;
+                }
+            }
+            scoreBallsLabel.Text = count.ToString();
+        }
     }
 }
