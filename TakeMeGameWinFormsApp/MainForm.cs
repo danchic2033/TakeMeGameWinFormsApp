@@ -5,6 +5,7 @@ namespace TakeMeGameWinFormsApp
     {
         List<MoveBall> moveBalls;
         PointBall pointBall;
+        private int count = 0;
         public MainForm()
         {
             InitializeComponent();
@@ -20,28 +21,16 @@ namespace TakeMeGameWinFormsApp
                 randomSizeAndPointBall.Start();
             }
         }
-        private void MainForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            var pointBall = new PointBall(this, e.X, e.Y);
-            pointBall.Show();
-        }
-
-        private void goBallsButton_Click(object sender, EventArgs e)
-        {
-            timer.Start();
-        }
-
-        private void movePointBall_Click(object sender, EventArgs e)
-        {
-            pointBall.Move();
-        }
 
         private void stopAllButton_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < 10; i++)
             {
                 moveBalls[i].Stop();
+                if (moveBalls[i].IsCaught())
+                    count++;
             }
+            MessageBox.Show($"Внутри формы {count} шаров");
         }
     }
 }
