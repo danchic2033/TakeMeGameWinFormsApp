@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36705.20 d17.14
+VisualStudioVersion = 17.14.36705.20
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeMeGameWinFormsApp", "TakeMeGameWinFormsApp\TakeMeGameWinFormsApp.csproj", "{837AE500-B168-4357-92C1-F1551DEA8CAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeMeGameWinFormsAppHard", "TakeMeGameWinFormsAppHard\TakeMeGameWinFormsAppHard.csproj", "{0C67ED54-E3F0-418B-85DA-743A312A8830}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{837AE500-B168-4357-92C1-F1551DEA8CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{837AE500-B168-4357-92C1-F1551DEA8CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{837AE500-B168-4357-92C1-F1551DEA8CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C67ED54-E3F0-418B-85DA-743A312A8830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C67ED54-E3F0-418B-85DA-743A312A8830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C67ED54-E3F0-418B-85DA-743A312A8830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C67ED54-E3F0-418B-85DA-743A312A8830}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

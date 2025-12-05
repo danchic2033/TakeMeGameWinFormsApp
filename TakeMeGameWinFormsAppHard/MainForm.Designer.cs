@@ -1,4 +1,5 @@
-﻿namespace TakeMeGameWinFormsApp
+﻿
+namespace TakeMeGameWinFormsAppHard
 {
     partial class MainForm
     {
@@ -29,46 +30,59 @@
         private void InitializeComponent()
         {
             createBallsButton = new Button();
-            stopAllButton = new Button();
+            getBallsLabel = new Label();
+            scoreBallsLabel = new Label();
             SuspendLayout();
             // 
             // createBallsButton
             // 
-            createBallsButton.Location = new Point(504, 12);
+            createBallsButton.Location = new Point(713, 12);
             createBallsButton.Name = "createBallsButton";
-            createBallsButton.Size = new Size(107, 40);
+            createBallsButton.Size = new Size(75, 23);
             createBallsButton.TabIndex = 0;
-            createBallsButton.Text = "Создать";
+            createBallsButton.Text = "создать";
             createBallsButton.UseVisualStyleBackColor = true;
             createBallsButton.Click += createBallsButton_Click;
             // 
-            // stopAllButton
+            // getBallsLabel
             // 
-            stopAllButton.Location = new Point(617, 12);
-            stopAllButton.Name = "stopAllButton";
-            stopAllButton.Size = new Size(103, 40);
-            stopAllButton.TabIndex = 1;
-            stopAllButton.Text = "Остановить ";
-            stopAllButton.UseVisualStyleBackColor = true;
-            stopAllButton.Click += stopAllButton_Click;
+            getBallsLabel.AutoSize = true;
+            getBallsLabel.Location = new Point(734, 54);
+            getBallsLabel.Name = "getBallsLabel";
+            getBallsLabel.RightToLeft = RightToLeft.No;
+            getBallsLabel.Size = new Size(33, 15);
+            getBallsLabel.TabIndex = 1;
+            getBallsLabel.Text = "Счет";
+            // 
+            // scoreBallsLabel
+            // 
+            scoreBallsLabel.AutoSize = true;
+            scoreBallsLabel.Location = new Point(775, 54);
+            scoreBallsLabel.Name = "scoreBallsLabel";
+            scoreBallsLabel.Size = new Size(13, 15);
+            scoreBallsLabel.TabIndex = 2;
+            scoreBallsLabel.Text = "0";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 450);
-            Controls.Add(stopAllButton);
+            Controls.Add(scoreBallsLabel);
+            Controls.Add(getBallsLabel);
             Controls.Add(createBallsButton);
             Name = "MainForm";
             Text = "Form1";
             Load += MainForm_Load;
+            MouseDown += MainForm_MouseDown;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button createBallsButton;
-        private Button stopAllButton;
+        private Label getBallsLabel;
+        private Label scoreBallsLabel;
     }
 }
