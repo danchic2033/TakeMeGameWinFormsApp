@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             createBallsButton = new Button();
             stopAllButton = new Button();
-            goBallsButton = new Button();
-            movePointBall = new Button();
-            timer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // createBallsButton
@@ -42,7 +38,7 @@
             createBallsButton.Name = "createBallsButton";
             createBallsButton.Size = new Size(107, 40);
             createBallsButton.TabIndex = 0;
-            createBallsButton.Text = "много шариков";
+            createBallsButton.Text = "Создать";
             createBallsButton.UseVisualStyleBackColor = true;
             createBallsButton.Click += createBallsButton_Click;
             // 
@@ -52,34 +48,9 @@
             stopAllButton.Name = "stopAllButton";
             stopAllButton.Size = new Size(103, 40);
             stopAllButton.TabIndex = 1;
-            stopAllButton.Text = "Остановить все";
+            stopAllButton.Text = "Остановить ";
             stopAllButton.UseVisualStyleBackColor = true;
             stopAllButton.Click += stopAllButton_Click;
-            // 
-            // goBallsButton
-            // 
-            goBallsButton.BackColor = SystemColors.Control;
-            goBallsButton.Location = new Point(388, 12);
-            goBallsButton.Name = "goBallsButton";
-            goBallsButton.Size = new Size(89, 40);
-            goBallsButton.TabIndex = 2;
-            goBallsButton.Text = "Двигать";
-            goBallsButton.UseVisualStyleBackColor = false;
-            goBallsButton.Click += goBallsButton_Click;
-            // 
-            // movePointBall
-            // 
-            movePointBall.Location = new Point(392, 72);
-            movePointBall.Name = "movePointBall";
-            movePointBall.Size = new Size(153, 37);
-            movePointBall.TabIndex = 3;
-            movePointBall.Text = "двигать pointBall";
-            movePointBall.UseVisualStyleBackColor = true;
-            movePointBall.Click += movePointBall_Click;
-            // 
-            // timer
-            // 
-            timer.Interval = 10;
             // 
             // MainForm
             // 
@@ -87,13 +58,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(800, 450);
-            Controls.Add(movePointBall);
-            Controls.Add(goBallsButton);
             Controls.Add(stopAllButton);
             Controls.Add(createBallsButton);
             Name = "MainForm";
             Text = "Form1";
-            MouseDown += MainForm_MouseDown;
             ResumeLayout(false);
         }
 
@@ -101,8 +69,5 @@
 
         private Button createBallsButton;
         private Button stopAllButton;
-        private Button goBallsButton;
-        private Button movePointBall;
-        private System.Windows.Forms.Timer timer;
     }
 }

@@ -9,14 +9,17 @@ namespace TakeMeGameWinFormsApp
     public class Ball
     {
         private MainForm form;
-        private int vx = 1;
-        private int vy = 1;
+        private Random rand = new Random();
+        private int vx;
+        private int vy;
         protected int x = 150;
         protected int y = 150;
         protected int size = 70;
         public Ball(MainForm form) 
         {
             this.form = form;
+            vx = rand.Next(-5, 6);
+            vy = rand.Next(-5, 6);
         }
 
         public void Move()
@@ -45,6 +48,11 @@ namespace TakeMeGameWinFormsApp
             var brush = Brushes.White; // сравнять цвет с цветом формы
             var rectangle = new Rectangle(x, y, size, size);
             graphics.FillEllipse(brush, rectangle);
+        }
+
+        public bool IsCaught()
+        {
+            return x >= 0 && y >= 0 && (x + size) <= form.ClientSize.Width && (y + size) <= form.ClientSize.Height;
         }
     }
 }
