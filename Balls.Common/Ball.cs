@@ -65,7 +65,7 @@ namespace Balls.Common
         }
         public void Clear()
         {
-            var brush = Brushes.LightGray; // сравнять цвет с цветом формы
+            var brush = new SolidBrush(form.BackColor); // сравнять цвет с цветом формы
             Draw(brush);
         }
 
