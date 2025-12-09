@@ -1,21 +1,24 @@
 ﻿using Balls.Common;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BilliardGameWinFormsApp
+namespace Balls.Common
 {
     public class BillyardBall : MoveBall
     {
 
         public event EventHandler<HitEventArgs> OnHited;
         public BillyardBall(Form form) : base(form)
+        { }
+
+        public BillyardBall(Form form, Color color) : base(form)
         {
-            centerX = random.Next(LeftSide(), RightSide());
-            centerY = random.Next(TopSide(), DownSide());
+            this.color = color;
         }
 
         public bool LeftOfCenter()
