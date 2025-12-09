@@ -10,22 +10,39 @@ namespace Balls.Common
 {
     public class Ball
     {
-        private Form form;
+        protected Form form;
         private Timer timer;
         private Random rand = new Random();
-        protected int vx;
-        protected int vy;
-        protected int centerX = 10;
-        protected int centerY = 10;
-        protected int radius = 25;
-        public Ball(Form form) 
+        protected float vx;
+        protected float vy;
+        protected int centerX = 5;
+        protected int centerY = 5;
+        protected int radius = 15;
+        protected Color color;
+
+        public Ball(Form form)
         {
             this.form = form;
-            vx = rand.Next(-5, 6);
-            vy = rand.Next(-5, 6);
+            vx = (float)rand.NextDouble() * 10 - 5;
+            vy = (float)rand.NextDouble() * 10 - 5;
             timer = new Timer();
             timer.Interval = 20;
             timer.Tick += Timer_Tick;
+        }
+        public Ball(Form form, Color color) 
+        {
+            this.color = color;
+            this.form = form;
+            vx = (float)rand.NextDouble() * 10 - 5;
+            vy = (float)rand.NextDouble() * 10 - 5;
+            timer = new Timer();
+            timer.Interval = 20;
+            timer.Tick += Timer_Tick;
+        }
+
+        public Color GetColor()
+        {
+            return color;
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -52,14 +69,14 @@ namespace Balls.Common
 
         public void Show()
         {
-            var brush = Brushes.Black;
+            var brush = new SolidBrush(color);
             Draw(brush);
         }
 
         protected virtual void Go()
         {
-            centerX += vx;
-            centerY += vy;
+            centerX += (int)vx;
+            centerY += (int)vy;
 
             
         }
