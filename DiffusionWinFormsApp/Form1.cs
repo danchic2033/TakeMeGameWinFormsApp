@@ -50,8 +50,13 @@ namespace DiffusionWinFormsApp
                     }
                 }
             }
-
+            int count = 0;
             if (leftOfCenterBlueCount == leftOfCenterBlackCount && rightOfCenterBlackCount == rightOfCenterBlueCount && leftOfCenterBlueCount + leftOfCenterBlackCount + rightOfCenterBlackCount + rightOfCenterBlueCount == ballsCount)
+            {
+                count++;
+            }
+
+            if (count == 3)
             {
                 foreach (var ball in balls)
                 {
