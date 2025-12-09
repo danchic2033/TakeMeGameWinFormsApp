@@ -15,8 +15,8 @@ namespace Balls.Common
         private Random rand = new Random();
         protected float vx;
         protected float vy;
-        protected int centerX = 5;
-        protected int centerY = 5;
+        protected float centerX = 5;
+        protected float centerY = 5;
         protected int radius = 15;
         protected Color color;
 
@@ -67,7 +67,7 @@ namespace Balls.Common
             Show();
         }
 
-        public void Show()
+        public virtual void Show()
         {
             var brush = new SolidBrush(color);
             Draw(brush);
@@ -86,10 +86,10 @@ namespace Balls.Common
             Draw(brush);
         }
 
-        private void Draw(Brush brush)
+        public void Draw(Brush brush)
         {
             var graphics = form.CreateGraphics();
-            var rectangle = new Rectangle(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
+            var rectangle = new RectangleF(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
             graphics.FillEllipse(brush, rectangle);
         }
 
