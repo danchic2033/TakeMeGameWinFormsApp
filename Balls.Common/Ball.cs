@@ -13,8 +13,8 @@ namespace Balls.Common
         protected Form form;
         private Timer timer;
         private Random rand = new Random();
-        protected int vx;
-        protected int vy;
+        protected float vx;
+        protected float vy;
         protected int centerX = 5;
         protected int centerY = 5;
         protected int radius = 15;
@@ -23,8 +23,8 @@ namespace Balls.Common
         public Ball(Form form)
         {
             this.form = form;
-            vx = rand.Next(-5, 6);
-            vy = rand.Next(-5, 6);
+            vx = (float)rand.NextDouble() * 10 - 5;
+            vy = (float)rand.NextDouble() * 10 - 5;
             timer = new Timer();
             timer.Interval = 20;
             timer.Tick += Timer_Tick;
@@ -33,8 +33,8 @@ namespace Balls.Common
         {
             this.color = color;
             this.form = form;
-            vx = rand.Next(-5, 6);
-            vy = rand.Next(-5, 6);
+            vx = (float)rand.NextDouble() * 10 - 5;
+            vy = (float)rand.NextDouble() * 10 - 5;
             timer = new Timer();
             timer.Interval = 20;
             timer.Tick += Timer_Tick;
@@ -75,8 +75,8 @@ namespace Balls.Common
 
         protected virtual void Go()
         {
-            centerX += vx;
-            centerY += vy;
+            centerX += (int)vx;
+            centerY += (int)vy;
 
             
         }
