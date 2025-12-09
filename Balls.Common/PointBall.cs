@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace TakeMeGameWinFormsApp
+namespace Balls.Common
 {
     public class PointBall : Ball
     {
-        public PointBall(MainForm form, int x, int y) : base(form)
+        public PointBall(Form form, int x, int y) : base(form)
         {
-            this.x = x;
-            this.y = y;
+            this.centerX = x;
+            this.centerY = y;
         }
     }
 }

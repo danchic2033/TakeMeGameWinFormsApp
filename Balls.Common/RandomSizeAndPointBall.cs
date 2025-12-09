@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace TakeMeGameWinFormsApp
+namespace Balls.Common
 {
     public class RandomSizeAndPointBall : RandomPointBall
     {
-        public RandomSizeAndPointBall(MainForm form) : base(form)
+        public RandomSizeAndPointBall(Form form) : base(form)
         {
-            size = random.Next(30, 70); 
+            radius = random.Next(10, 40); 
         }
     }
 }

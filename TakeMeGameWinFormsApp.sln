@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeMeGameWinFormsApp", "Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeMeGameWinFormsAppHard", "TakeMeGameWinFormsAppHard\TakeMeGameWinFormsAppHard.csproj", "{0C67ED54-E3F0-418B-85DA-743A312A8830}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balls.Common", "Balls.Common\Balls.Common.csproj", "{23BBDBB2-9FE7-4DCD-8F7F-F02A63DBE635}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilliardGameWinFormsApp", "BilliardGameWinFormsApp\BilliardGameWinFormsApp.csproj", "{D3871FEE-6859-4C91-B13B-1DE20B092F68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{0C67ED54-E3F0-418B-85DA-743A312A8830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C67ED54-E3F0-418B-85DA-743A312A8830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C67ED54-E3F0-418B-85DA-743A312A8830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BBDBB2-9FE7-4DCD-8F7F-F02A63DBE635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BBDBB2-9FE7-4DCD-8F7F-F02A63DBE635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BBDBB2-9FE7-4DCD-8F7F-F02A63DBE635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BBDBB2-9FE7-4DCD-8F7F-F02A63DBE635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3871FEE-6859-4C91-B13B-1DE20B092F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3871FEE-6859-4C91-B13B-1DE20B092F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3871FEE-6859-4C91-B13B-1DE20B092F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3871FEE-6859-4C91-B13B-1DE20B092F68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

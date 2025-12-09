@@ -1,9 +1,11 @@
 
+using Balls.Common;
+
 namespace TakeMeGameWinFormsApp
 {
     public partial class MainForm : Form
     {
-        List<MoveBall> moveBalls;
+        List<Ball> balls;
         PointBall pointBall;
         private int count = 0;
         public MainForm()
@@ -13,12 +15,12 @@ namespace TakeMeGameWinFormsApp
 
         private void createBallsButton_Click(object sender, EventArgs e)
         {
-            moveBalls = new List<MoveBall>();
+            balls = new List<Ball>();
             for (int i = 0; i < 10; i++)
             {
-                var randomSizeAndPointBall = new MoveBall(this);
-                moveBalls.Add(randomSizeAndPointBall);
-                randomSizeAndPointBall.Start();
+                var moveBall = new MoveBall(this);
+                balls.Add(moveBall);
+                moveBall.Start();
             }
         }
 
@@ -26,8 +28,8 @@ namespace TakeMeGameWinFormsApp
         {
             for (int i = 0; i < 10; i++)
             {
-                moveBalls[i].Stop();
-                if (moveBalls[i].IsCaught())
+                balls[i].Stop();
+                if (balls[i].IsCaught())
                     count++;
             }
             MessageBox.Show($"Внутри формы {count} шаров");
