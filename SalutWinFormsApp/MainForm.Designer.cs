@@ -1,4 +1,5 @@
 ﻿
+
 namespace SalutWinFormsApp
 {
     partial class MainForm
@@ -38,11 +39,10 @@ namespace SalutWinFormsApp
             ClientSize = new Size(800, 450);
             Name = "MainForm";
             Text = "Form1";
-            MouseDown += this.MainForm_MouseDown;
+            Load += this.MainForm_Load;
+            MouseDown += MainForm_MouseDown;
             ResumeLayout(false);
         }
-
-        
 
         #endregion
     }
