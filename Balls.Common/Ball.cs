@@ -24,7 +24,7 @@ namespace Balls.Common
         {
             this.form = form;
             vx = (float)rand.NextDouble() * 10 - 5;
-            vy = (float)rand.NextDouble() * 10 - 5;
+            vy = (float)rand.NextDouble() * 20 - 5;
             timer = new Timer();
             timer.Interval = 20;
             timer.Tick += Timer_Tick;
