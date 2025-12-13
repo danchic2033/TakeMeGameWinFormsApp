@@ -17,12 +17,13 @@ namespace Balls.Common
         protected float vy;
         protected float centerX = 5;
         protected float centerY = 5;
-        protected int radius = 15;
+        protected int radius;
         protected Color color;
 
         public Ball(Form form)
         {
             this.form = form;
+            radius = rand.Next(15, 40);
             vx = (float)rand.NextDouble() * 10 - 5;
             vy = (float)rand.NextDouble() * 20 - 5;
             timer = new Timer();
