@@ -1,3 +1,5 @@
+using Balls.Common;
+
 namespace TakeMeGameWinFormsAppHard
 {
     public partial class MainForm : Form

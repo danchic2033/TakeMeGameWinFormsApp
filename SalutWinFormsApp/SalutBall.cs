@@ -24,6 +24,11 @@ namespace SalutWinFormsApp
             var brush = new SolidBrush(Color.Black);
             Draw(brush);
         }
+        public void ShowColor()
+        {
+            var brush = new SolidBrush((Color)Color.Blue);
+            Draw(brush);
+        }
         protected override void Go()
         {
             base.Go();
