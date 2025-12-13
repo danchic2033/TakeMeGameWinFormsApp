@@ -53,9 +53,19 @@ namespace SalutWinFormsApp
             {
                 if (moveBalls[i].ContainsPoint(e.X, e.Y))
                 {
-                    moveBalls[i].Stop();
-                    moveBalls[i].Clear();
-                    break;
+                    if (moveBalls[i].GetColor() == Color.Black)
+                    {
+                        MessageBox.Show("Вы проиграли");
+                        Application.Restart();
+                        // Тут можно добавить завершение игры или перезапуск
+                    }
+                    else
+                    {
+                        moveBalls[i].Stop();
+                        moveBalls[i].Clear();
+                        moveBalls.RemoveAt(i);
+                        break;
+                    }
                 }
             }
             NewBall();
@@ -63,12 +73,23 @@ namespace SalutWinFormsApp
 
         private void NewBall()
         {
+
             var random = new Random();
-            int countFirstBall = random.Next(1, 2);
-            var salut = new SalutBall(this, ClientSize.Width / 2, ClientSize.Height * 1);
-            salut.Start();
-            timer.Start();
-            moveBalls.Add(salut);
+            int numberOfColor = random.Next(1, 3);
+            if (numberOfColor == 1)
+            {
+                var salut = new SalutBall(this, ClientSize.Width / 2, ClientSize.Height * 1, Color.Aqua);
+                salut.Start();
+                timer.Start();
+                moveBalls.Add(salut);
+            }
+            else
+            {
+                var salut = new SalutBall(this, ClientSize.Width / 2, ClientSize.Height * 1, Color.Black);
+                salut.Start();
+                timer.Start();
+                moveBalls.Add(salut);
+            }
         }
     }
 }

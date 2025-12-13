@@ -18,15 +18,17 @@ namespace SalutWinFormsApp
             this.centerY = centerY;
             vy = -Math.Abs(vy);
         }
+        public SalutBall(Form form, int centerX, int centerY, Color color) : base(form)
+        {
+            this.centerX = centerX;
+            this.centerY = centerY;
+            vy = -Math.Abs(vy);
+            this.color = color;
+        }
         public override void Show()
         {
             base.Show();
-            var brush = new SolidBrush(Color.Black);
-            Draw(brush);
-        }
-        public void ShowColor()
-        {
-            var brush = new SolidBrush((Color)Color.Blue);
+            var brush = new SolidBrush(color);
             Draw(brush);
         }
         protected override void Go()
