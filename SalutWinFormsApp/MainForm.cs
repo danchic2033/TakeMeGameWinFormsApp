@@ -59,6 +59,13 @@ namespace SalutWinFormsApp
                         Application.Restart();
                         // Тут можно добавить завершение игры или перезапуск
                     }
+                    if (moveBalls[i].GetColor() == Color.Yellow)
+                    {
+                        moveBalls[i].Stop();
+                        moveBalls[i].Clear();
+                        moveBalls.RemoveAt(i);
+                        break;
+                    }
                     else
                     {
                         moveBalls[i].Stop();
@@ -75,10 +82,17 @@ namespace SalutWinFormsApp
         {
 
             var random = new Random();
-            int numberOfColor = random.Next(1, 3);
+            int numberOfColor = random.Next(1, 4);
             if (numberOfColor == 1)
             {
                 var salut = new SalutBall(this, ClientSize.Width / 2, ClientSize.Height * 1, Color.Aqua);
+                salut.Start();
+                timer.Start();
+                moveBalls.Add(salut);
+            }
+            if (numberOfColor == 2)
+            {
+                var salut = new SalutBall(this, ClientSize.Width / 2, ClientSize.Height * 1, Color.Yellow);
                 salut.Start();
                 timer.Start();
                 moveBalls.Add(salut);
